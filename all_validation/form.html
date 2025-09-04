@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .container
+            {
+                margin-left:250px;
+                margin-top:-20px;
+            }
+        span
+            {
+                color: red;
+            }
+        input
+            {
+                outline: none;
+            }
+            textarea
+            {
+                outline: none;
+            }
+    </style>
+    <script>
+        function name_validation()
+        {
+            var result;
+            var name=document.getElementById("name").value;
+            if(name=="")
+            {
+                document.getElementById("name").style.borderColor="red";
+                document.getElementById("n_error").innerText="Fill the name";
+                result=false;
+            }
+            else
+            {
+                document.getElementById("name").style.borderColor="green";
+                document.getElementById("n_error").innerText="";
+
+            }
+        }
+        function fname_validation()
+        {
+            var fname=document.getElementById("fname").value;
+            if(fname=="")
+            {
+                document.getElementById("fname").style.borderColor="red";
+                document.getElementById("f_error").innerText="Fill the name";
+            }
+            else
+            {
+                document.getElementById("fname").style.borderColor="green";
+                document.getElementById("f_error").innerText="";
+
+            }
+        }
+        function  email_validation()
+        {
+            var email=document.getElementById("email").value;
+            if(email=="")
+            {
+                document.getElementById("email").style.borderColor="red";
+                document.getElementById("email_error").innerText="Fill the name";
+            }
+            else
+            {
+                document.getElementById("email").style.borderColor="green";
+                document.getElementById("email_error").innerText="";
+
+            }
+        }
+        function  pass_validation()
+        {
+            var pass=document.getElementById("pass").value;
+            var l=document.getElementById("pass").value.length;
+                   if(l<1)
+                    {
+                        document.getElementById("pass_e").innerText="";
+                        document.getElementById("pass").style.borderColor="red";
+                        document.getElementById("pass_error").innerText="Enter the Password";
+                    }
+                  else if(l>0&&l<5)
+                  {
+                    document.getElementById("pass_e").innerText="Weak";
+                    document.getElementById("pass_e").style.color="red";
+                    document.getElementById("pass_error").innerText="";
+                  }
+                  else if((l>=5)&&(l<8))
+                  {
+                    document.getElementById("pass_e").innerText="Good";  
+                    document.getElementById("pass_e").style.color="yellow";    
+                    document.getElementById("pass_error").innerText="";            
+                  }
+                  else if(l>=8)
+                  {
+                    document.getElementById("pass_e").innerText="Strong";
+                    document.getElementById("pass_e").style.color="green";
+                    document.getElementById("pass").style.borderColor="green";
+                    document.getElementById("pass_error").innerText="";
+                  }
+                  else if(pass=="")
+                  {
+                     document.getElementById("pass").style.borderColor="red";
+                     document.getElementById("pass_e").innerText="Plzz Fill The Number";
+                  }
+                  else
+                  {
+                     document.getElementById("pass").style.borderColor="green";
+                     document.getElementById("pass_e").innerText="";
+                  }
+          }
+        function show_pass()
+        {
+            document.getElementById("pass").type="text";
+            document.getElementById("close_eye").style.display="block";
+            document.getElementById("open_eye").style.display="none";
+        }
+        function hide_pass()
+        {
+            document.getElementById("pass").type="password";
+            document.getElementById("close_eye").style.display="none";
+            document.getElementById("open_eye").style.display="block";
+        }
+        function dob_validation()
+        {
+            var dob=document.getElementById("dob").value;
+            if(dob=="")
+            {
+                document.getElementById("dob").style.borderColor="red";
+                document.getElementById("dob_e").innerText="Fill the DOB";
+            }
+            else
+            {
+                document.getElementById("dob").style.borderColor="green";
+                document.getElementById("dob_e").innerText="";
+
+            }
+        }
+        function tob_validation()
+        {
+            var tob=document.getElementById("tob").value;
+            if(tob=="")
+            {
+                document.getElementById("tob").style.borderColor="red";
+                document.getElementById("tob_e").innerText="Fill the DOB";
+            }
+            else
+            {
+                document.getElementById("tob").style.borderColor="green";
+                document.getElementById("tob_e").innerText="";
+
+            }
+        }
+        function num_validation()
+        {
+            var num = document.getElementById("num").value;
+            if(num=="")
+            {
+                document.getElementById("num").style.borderColor="red";
+                document.getElementById("num_e").innerText="Fill the Number";
+            }
+            else
+            {
+                document.getElementById("num").style.borderColor="green";
+                document.getElementById("num_e").innerText="";
+
+            }
+        }
+        function img_validation()
+        {
+            var img = document.getElementById("img").value;
+            if(img=="")
+            {
+                document.getElementById("img").style.borderColor="red";
+                document.getElementById("img_e").innerText="Fill the Number";
+            }
+            else
+            {
+                document.getElementById("img").style.borderColor="green";
+                document.getElementById("img_e").innerText="";
+
+            }
+        }
+        function add_validation()
+        {
+            var add = document.getElementById("add").value;
+            if(add=="")
+            {
+                document.getElementById("add").style.borderColor="red";
+                document.getElementById("add_e").innerText="Plzz Fill The Address";
+            }
+            else
+            {
+                document.getElementById("add").style.borderColor="green";
+                document.getElementById("add_e").innerText="";
+            }
+        }
+        function city_validation()
+        {
+            var city = document.getElementById("city").value;
+            if (city=="")
+            {
+                document.getElementById("city_e").innerText="plz select options";  
+            }
+            else
+            {
+                document.getElementById("city_e").innerText="";
+            }
+        }
+        function hobby_validation()
+        {
+            var hobby_result=true;
+            var c=0;
+            var hobby1=document.getElementsByName("Hobby");
+            var H_length=document.getElementsByName("Hobby").length;
+            for(var i=0;i<H_length;i++)
+            {
+                if(hobby1[i].checked==true)
+                {  
+                    c++;
+                }
+            }
+            if (c==0)
+            {
+                document.getElementById("hobby_e").innerText="plz fill the hobbys";    
+            }
+            else if(c==1)
+            {
+                document.getElementById("hobby_e").innerText="Fill Minimum 2 hobbies";
+                hobby_result=false;
+            }
+            else
+            {
+                hobby_result=true;
+                document.getElementById("hobby_e").innerText="";
+            }
+        }
+        function gender_validation()
+        {
+            var resultt=false;
+            var Gender=document.getElementsByName("gender");
+            var l=document.getElementsByName("gender").length;
+            for(var i=0;i<l;i++)
+            {
+                if(Gender[i].checked==true)
+                {
+                    resultt=true;
+                }
+            }
+            if(resultt==false)
+            {
+                document.getElementById("male_e").innerText="Fill the gender";
+                result=resultt;
+            }
+            else{
+                document.getElementById("male_e").innerText="";
+            }
+        }
+        function validation()
+        {
+            var result=true;
+            var name=document.getElementById("name").value;
+            if(name=="")
+                {
+                    document.getElementById("n_error").innerText="Please Fill the Name";
+                    result=false;
+                }
+            var fname=document.getElementById("fname").value;
+            if(fname=="")
+            {
+                document.getElementById("f_error").innerText="Fill the father name";
+                result=false;
+            }
+            var email=document.getElementById("email").value;
+            if(email=="")
+            {
+                document.getElementById("email_error").innerText="Fill the Email";
+                result=false;
+            }
+            var pass=document.getElementById("pass").value;
+            if(pass=="")
+            {
+                document.getElementById("pass_e").innerText="Enter the Password";
+                result=false;
+            }
+            var dob=document.getElementById("dob").value;
+            if(dob=="")
+            {
+                document.getElementById("dob_e").innerText="Fill the dob";
+                result=false;
+            }
+            var tob=document.getElementById("tob").value;
+            if(tob=="")
+            {
+                document.getElementById("tob_e").innerText="Fill the time";
+                result=false;
+            }
+            var num=document.getElementById("num").value.length;
+            if(num!=10)
+            {
+                document.getElementById("num_e").innerText="Plzz Enter 10 Numbers";
+                result=false;
+            }
+            var img=document.getElementById("img").value;
+            if(img=="")
+            {
+                document.getElementById("img_e").innerText="Add the image";
+                result=false;
+            }
+            var add=document.getElementById("add").value;
+            if(add=="")
+            {
+                document.getElementById("add_e").innerText="Fill the Address";
+                result=false;
+            }
+            var city=document.getElementById("city").value;
+            if(city=="")
+            {
+                document.getElementById("city_e").innerText="Fill the city";
+                result=false;
+            }
+           
+            var resultt=false;
+            var Gender=document.getElementsByName("gender");
+            var l=document.getElementsByName("gender").length;
+            for(var i=0;i<l;i++)
+            {
+                if(Gender[i].checked==true)
+                {
+                    resultt=true;
+                }
+            }
+            if(resultt==false)
+            {
+                document.getElementById("male_e").innerText="Fill the gender";
+                result=result;
+            }
+            else{
+                document.getElementById("male_e").innerText="";
+            }
+            var hobby_result=true;
+            var c=0;
+            var hobby=document.getElementsByName("Hobby");
+            var length=document.getElementsByName("Hobby").length;
+            for(var i=0;i<length;i++)
+            {
+                if(hobby[i].checked==true)
+                {  
+                    c++;
+                }
+            }
+            if(c<1)
+            {
+                document.getElementById("hobby_e").innerText="Fill the Hobby";
+                var hobby_result=false;
+            }
+            else if(c<2)
+            {
+                document.getElementById("hobby_e").innerText="Fill Minimum 2 hobbies";
+                var hobby_result=false;
+            }
+            else
+            {
+                document.getElementById("hobby_e").innerText="";
+                hobby_result= true;
+            }
+          return result;
+        }
+    </script>
+</head>
+<body>
+    <form action="abc.html" onsubmit="return validation()">
+        Name<span>*</span>:-<input id="name" type="text" onkeyup="name_validation()"><span id="n_error"></span>
+        <br><br>
+        Father Name<span>*</span>:-<input id="fname" type="text"  onkeyup="fname_validation()"><span id="f_error"></span>
+        <br><br>
+        Email:-<span>*</span><input id="email" type="text" onkeyup="email_validation()"><span id="email_error"></span>
+        <br><br>
+        Password:<span>*</span><input id="pass" type="password"  onkeyup="pass_validation()">
+        <div class="container">
+            <i class="fa-solid fa-eye" id="open_eye" onclick="show_pass()" style="position: absolute;left: 270px;"></i><br>
+            <i class="fa-solid fa-eye-slash" onclick="hide_pass()" id="close_eye" style="display: none; position: absolute;left: 270px;top: 127px;"></i>
+            <span id="pass_e" style="position: absolute;
+            left: 300px; top: 125px;"></span> <span id="pass_error" style="position: absolute;
+            left: 300px; top: 125px;"></span>
+        </div>
+        <br><br>
+        DOB:-<span>*</span><input id="dob" type="date" onchange="dob_validation()" ><span id="dob_e"></span>
+        <br><br>
+        TOB:-<span>*</span><input id="tob" type="time" onchange="tob_validation()"><span id="tob_e"></span>
+        <br><br>
+        Number:-<span>*</span><input id="num" type="number" onkeyup="num_validation()"><span id="num_e"></span>
+        <br><br> 
+        Image:-<span>*</span><input id="img" type="file" onchange="img_validation()"><span id="img_e"></span>
+        <br><br>
+        Address:-<span>*</span><textarea id="add" onkeyup="add_validation()"></textarea><span id="add_e"></span>
+        <br><br>
+        City:-<span>*</span>:-
+        <select id="city" onchange="city_validation()">
+            <option value="">select city</option>
+            <option value="i">Indore</option>
+            <option value="b">Bhopal</option>
+            <option value="p">Pune</option>
+        </select><span id="city_e"></span> 
+       <br><br>
+        Gender:-<span>*</span><input type="radio" name="gender" value="male" id="gender_male" onchange="gender_validation()">Male
+                              <input type="radio" name="gender" value="female" id="gender_female" onchange="gender_validation()">Female<span id="male_e"></span>
+        <br><br>
+        Hobby:-<span>*</span>
+        <input type="checkbox" name="Hobby" onchange="hobby_validation()">Besboll
+        <input type="checkbox" name="Hobby" onchange="hobby_validation()">Football
+        <input type="checkbox" name="Hobby" onchange="hobby_validation()">Hockey
+        <input type="checkbox" name="Hobby" onchange="hobby_validation()">Cricket<span id="hobby_e"></span>
+        <br><br>
+        <input type="submit">
+    </form> 
+</body>
+</html>

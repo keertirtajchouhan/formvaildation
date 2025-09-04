@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(193, 129, 195);
+    overflow: hidden;
+}
+
+p {
+    color: gray;
+}
+
+
+span {
+    color: red;
+}
+
+#hide_eye {
+    display: none;
+}
+
+.eye {
+    margin-left: 260px;
+
+    margin-top: -20px;
+}
+
+#pass_error {
+    margin-top: -24px;
+}
+
+img {
+    height: 35px;
+    margin-left: 25px;
+}
+
+#pt {
+    height: 650px;
+    width: 3px;
+    background: black;
+    margin-top: -418px;
+    margin-left: 750px;
+}
+
+#time {
+    margin-left: 200px;
+    margin-top: -1350px;
+
+}
+
+#reverse_timer {
+    margin-top: -700px;
+    margin-left: 1000px;
+}
+
+#pass_validation_box {
+    margin-top: 35px;
+}
+
+.container {
+    margin-left: 250px;
+    margin-top: -20px;
+}
+
+span {
+    color: red;
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    outline: none;
+}
+
+#pass_error {
+    margin-left: 285px;
+}
+
+#hide_eye {
+    display: none;
+}
+
+#show_msg {
+    margin-left: 50px;
+}
+
+.container {
+    margin-left: 250px;
+    margin-top: -20px;
+}
+
+input {
+    outline: none;
+}
+
+#form_div {
+    margin-left: 880px;
+    margin-top: -20px;
+}
+
+#top_bulb {
+    rotate: 180deg;
+}
+
+#left_bulb {
+    margin-top: 1450px;
+    rotate: 90deg;
+    margin-left: -1450px;
+}
+
+#right_box {
+    rotate: 270deg;
+    margin-right: -1450px;
+    margin-top: -1480px;
+}
